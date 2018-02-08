@@ -7,7 +7,8 @@ javascript: (function() {
     links[4] = "https://raw.githubusercontent.com/asterr/numbers/master/number05.png";
     links[5] = "https://raw.githubusercontent.com/asterr/numbers/master/number06.png";
     var i = localStorage.getItem('tracerindex') || 0;
-    i = (i+1) % 6;
+    i = parseInt(i);
+    i = ( i + 1) % 6;
     localStorage.setItem('tracerindex', i);
     window.open(links[i])
 })()
